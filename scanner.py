@@ -27,20 +27,14 @@ try:
 
 except KeyboardInterrupt:
 	print("Exiting...")
-	quit()
 
 except socket.gaierror:
-	print("Hostname could not be resolved")
-	quit()
+	print("Hostname could not be resolved")	
 
 except socket.error:
-	print("Could not connect to server")
-	quit()
-
+	print("Could not connect to server")	
 
 time_finished = datetime.now()
 time_delta = time_finished - time_started
 
 print(f"Used time {time_delta}")
-
-quit()
